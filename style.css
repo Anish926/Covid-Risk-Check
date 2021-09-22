@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background-color: white;
+  position: fixed;
+  font-family: Montserrat;
+}
+.modal-sub {
+  display: inline-block;
+}
+.modal-sub-details {
+  font-weight: bold;
+}
+.modal-sub-subscript {
+  font-style: italic;
+  margin-top: 0;
+  color: grey;
+  font-size: 14px;
+}
+.map {
+  width: 100vw;
+  height: 100vh;
+}
+
+.marker {
+  height: 3vh;
+  width: 3vh;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.marker:hover {
+  cursor: pointer;
+  height: 3.5vh;
+  width: 3.5vh;
+}
+.modal {
+  display: none;
+  position: fixed;
+
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: whitesmoke;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+  font-size: large;
+  border-radius: 20px;
+}
+.modal-details {
+  text-align: start;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.logo {
+  width: 75px;
+  height: 70px;
+  border-radius: 50%;
+  color: gainsboro;
+  border: solid;
+  display: block;
+}
+.table-guidelines,
+td {
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+@media all and (max-width: 540px) {
+  .logo {
+    margin-right: auto;
+    margin-left: auto;
+    width: 60px;
+    height: 55px;
+  }
+  .modal-content {
+    margin-top: 10px;
+    width: 95%;
+    height: auto;
+    font-size: medium;
+  }
+}

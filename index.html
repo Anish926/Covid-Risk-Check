@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Risk Calculator</title>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link href="utilities/autocomplete.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form autocomplete="off">
+      <div class="autocomplete">
+        <input
+          id="search-bar"
+          class="search"
+          type="text"
+          placeholder="Search your country..."
+        />
+        <i class="fa fa-search" id="search-button"></i>
+      </div>
+    </form>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="risk-country">NEPAL</p>
+        <hr />
+        <div class="modal-details">
+          <div>
+            Risk Level :
+            <p id="country-status" class="modal-sub modal-sub-details">
+              Country Status :
+            </p>
+          </div>
+          <div>
+            Crowdiness :
+            <p class="modal-sub modal-sub-details" id="crowdiness"></p>
+            <p class="modal-sub modal-sub-details">people/km <sup>2</sup></p>
+          </div>
+          <div>
+            Active Cases :
+            <p class="modal-sub modal-sub-details" id="active-cases"></p>
+          </div>
+          <div>
+            Doses Given :
+            <p class="modal-sub modal-sub-details" id="vaccinated"></p>
+          </div>
+          <div>
+            Estimated Time :
+            <p class="modal-sub modal-sub-details" id="estimated-years"></p>
+            <p class="modal-sub modal-sub-details" id="estimated-months"></p>
+            <p class="modal-sub-subscript">
+              (*to be vaccinated at current rate)
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="modal-guidelines">
+          <p>Health Guidelines</p>
+          <div>
+            <table class="table-guidelines">
+              <tr>
+                <td><img src="img/mask.png" class="logo" /></td>
+                <td>
+                  <p>
+                    A study published in
+                    <a
+                      href="https://www.healthaffairs.org/doi/10.1377/hlthaff.2020.00818"
+                      target="_blank"
+                      >Health Affairs</a
+                    >, has found that mask mandates led to a slowdown in daily
+                    COVID-19 growth rate.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="img/vaccine.png" class="logo" /></td>
+                <td>
+                  <p>
+                    <a
+                      href="https://www.cdc.gov/vaccines/covid-19/effectiveness-research/protocols.html"
+                      target="_blank"
+                      >Vaccine effectiveness studies</a
+                    >
+                    provide evidence that current COVID-19 vaccines reduce the
+                    risk of COVID-19, including severe illness, among people who
+                    are fully vaccinated by about 90%.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="img/handshake.png" class="logo" /></td>
+                <td>
+                  <p>
+                    A
+                    <a
+                      href="https://isfe.uky.edu/research/2020/did-social-distancing-measures-kentucky-help-flatten-covid-19-curve"
+                      target="_blank"
+                      >research study </a
+                    >in Kentucky showed that social distancing prevented over 90
+                    percent of the COVID-19 cases that would have otherwise
+                    occurred.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="map" class="map"></div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <script src="utilities/autocomplete.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

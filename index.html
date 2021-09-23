@@ -38,10 +38,14 @@
         <hr />
         <div class="modal-details">
           <div>
-            Risk Level :
-            <p id="country-status" class="modal-sub modal-sub-details">
-              Country Status :
+            Are you Vaccinated :
+            <p class="modal-sub modal-sub-details">
+              <input type="checkbox" id="vaccinatedCheck" />
             </p>
+          </div>
+          <div>
+            Risk Level :
+            <p id="country-status" class="modal-sub modal-sub-details"></p>
           </div>
           <div>
             Crowdiness :
@@ -67,54 +71,65 @@
         </div>
         <hr />
         <div class="modal-guidelines">
-          <p>Health Guidelines</p>
+          <p><strong>Health Guidelines</strong></p>
           <div>
-            <table class="table-guidelines">
-              <tr>
-                <td><img src="img/mask.png" class="logo" /></td>
-                <td>
-                  <p>
-                    A study published in
-                    <a
-                      href="https://www.healthaffairs.org/doi/10.1377/hlthaff.2020.00818"
-                      target="_blank"
-                      >Health Affairs</a
-                    >, has found that mask mandates led to a slowdown in daily
-                    COVID-19 growth rate.
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td><img src="img/vaccine.png" class="logo" /></td>
-                <td>
-                  <p>
-                    <a
-                      href="https://www.cdc.gov/vaccines/covid-19/effectiveness-research/protocols.html"
-                      target="_blank"
-                      >Vaccine effectiveness studies</a
-                    >
-                    provide evidence that current COVID-19 vaccines reduce the
-                    risk of COVID-19, including severe illness, among people who
-                    are fully vaccinated by about 90%.
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td><img src="img/handshake.png" class="logo" /></td>
-                <td>
-                  <p>
-                    A
-                    <a
-                      href="https://isfe.uky.edu/research/2020/did-social-distancing-measures-kentucky-help-flatten-covid-19-curve"
-                      target="_blank"
-                      >research study </a
-                    >in Kentucky showed that social distancing prevented over 90
-                    percent of the COVID-19 cases that would have otherwise
-                    occurred.
-                  </p>
-                </td>
-              </tr>
-            </table>
+            <div class="container">
+              <img
+                class="logo vaccine-logo"
+                src="img/mask.png"
+                width="200"
+                height="100"
+              />
+
+              <p class="modal-guidelines-details">
+                A study published in
+                <a
+                  href="https://www.healthaffairs.org/doi/10.1377/hlthaff.2020.00818"
+                  target="_blank"
+                  >Health Affairs</a
+                >, has found that <strong>mask</strong> mandates led to a
+                slowdown in daily COVID-19 growth rate.
+              </p>
+            </div>
+            <hr />
+            <div class="container">
+              <img
+                class="logo"
+                src="img/vaccine.png"
+                widht="180"
+                height="130"
+              />
+              <p class="modal-guidelines-details">
+                <a
+                  href="https://www.cdc.gov/vaccines/covid-19/effectiveness-research/protocols.html"
+                  target="_blank"
+                  >Vaccine effectiveness studies</a
+                >
+                provide evidence that current COVID-19
+                <strong>vaccines</strong> reduce the risk of COVID-19, including
+                severe illness, among people who are fully vaccinated by about
+                90%.
+              </p>
+            </div>
+            <hr />
+            <div class="container">
+              <img
+                class="logo social-logo"
+                src="img/social.png"
+                width="180"
+                height="100"
+              />
+              <p class="modal-guidelines-details">
+                A
+                <a
+                  href="https://isfe.uky.edu/research/2020/did-social-distancing-measures-kentucky-help-flatten-covid-19-curve"
+                  target="_blank"
+                  >research study </a
+                >in Kentucky showed that
+                <strong>social distancing</strong> prevented over 90 percent of
+                the COVID-19 cases that would have otherwise occurred.
+              </p>
+            </div>
           </div>
         </div>
       </div>

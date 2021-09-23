@@ -16,7 +16,23 @@ const estimatedYears = document.getElementById("estimated-years");
 const estimatedMonths = document.getElementById("estimated-months");
 const searchButton = document.getElementById("search-button");
 const searchBar = document.getElementById("search-bar");
+const vaccinatedCheck = document.getElementById("vaccinatedCheck");
+let risk = 0;
 
+vaccinatedCheck.addEventListener("change", () => {
+  let riskLevel;
+  if (vaccinatedCheck.checked) {
+    risk -= 2;
+    console.log("checked", risk);
+
+    riskLevel = riskStatus();
+  } else {
+    risk += 2;
+    console.log("not checked", risk);
+    riskLevel = riskStatus();
+  }
+  countryStatus.innerText = `${riskLevel}`;
+});
 searchBar.addEventListener("keydown", (key) => {
   if (key.code === "Enter") {
     triggerSearch(searchBar.value);
@@ -39,30 +55,8 @@ const map = new mapboxgl.Map({
   style: "mapbox://styles/mapbox/light-v10",
   zoom: 1,
 });
-
-function riskCalc(
-  populationDensity,
-  casesPerOneMillion,
-  testsPerOneMillion,
-  activePerOneMillion
-) {
-  const testToCaseRatio = testsPerOneMillion / casesPerOneMillion;
-  let risk = 0;
+function riskStatus() {
   let riskLevel;
-  if (testToCaseRatio <= 10) risk += 4;
-  else if (testToCaseRatio <= 30) risk += 2.5;
-  else risk += 1;
-
-  if (activePerOneMillion <= 100) risk += 1;
-  else if (activePerOneMillion <= 500) risk += 2.5;
-  else risk += 4;
-
-  if (populationDensity >= 300) risk += 2;
-  else if (populationDensity >= 100) risk += 1;
-  else risk += 0.5;
-
-  // todo if(vaccinated) risk-=2.5;
-
   if (risk <= 4) {
     countryStatus.style.color = "green";
     riskLevel = "Low";
@@ -74,6 +68,30 @@ function riskCalc(
     riskLevel = "High";
   }
   return riskLevel;
+}
+function riskCalc(
+  populationDensity,
+  casesPerOneMillion,
+  testsPerOneMillion,
+  activePerOneMillion
+) {
+  const testToCaseRatio = testsPerOneMillion / casesPerOneMillion;
+  risk = 0;
+  vaccinatedCheck.checked = false;
+  if (testToCaseRatio <= 10) risk += 4;
+  else if (testToCaseRatio <= 30) risk += 2.5;
+  else risk += 1;
+
+  if (activePerOneMillion <= 100) risk += 1;
+  else if (activePerOneMillion <= 500) risk += 2.5;
+  else risk += 4;
+
+  if (populationDensity >= 300) risk += 2;
+  else if (populationDensity >= 100) risk += 1;
+  else risk += 0.5;
+  console.log("initial riskLevel", risk);
+  // todo if(vaccinated) risk-=2.5;
+  return riskStatus();
 }
 
 function estimateVaccination(

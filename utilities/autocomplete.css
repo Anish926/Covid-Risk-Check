@@ -55,3 +55,6 @@
   /*when navigating through the items using the arrow keys:*/
   color: black !important;
 }
+.search-bar {
+  margin-left: 10px;
+}

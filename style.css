@@ -4,9 +4,28 @@ body {
   position: fixed;
   font-family: Montserrat;
 }
+
+#risk-country {
+  text-align: center;
+}
+
+.container {
+  margin: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vaccine-logo {
+  margin-left: -25px;
+}
+.social-logo {
+  margin-left: -10px;
+}
 .modal-sub {
   display: inline-block;
 }
+
 .modal-sub-details {
   font-weight: bold;
 }
@@ -16,6 +35,15 @@ body {
   color: grey;
   font-size: 14px;
 }
+
+.modal-guidelines {
+  text-align: center;
+}
+
+.modal-guidelines-details {
+  margin-bottom: 20px;
+}
+
 .map {
   width: 100vw;
   height: 100vh;
@@ -46,10 +74,10 @@ body {
 }
 
 .modal-content {
-  background-color: whitesmoke;
+  background-color: white;
   margin: 15% auto;
   padding: 20px;
-  width: 50%;
+  width: 45rem;
   text-align: center;
   font-size: large;
   border-radius: 20px;
@@ -70,32 +98,22 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-.logo {
-  width: 75px;
-  height: 70px;
-  border-radius: 50%;
-  color: gainsboro;
-  border: solid;
-  display: block;
-}
-.table-guidelines,
-td {
-  padding-right: 15px;
-  padding-top: 10px;
-  padding-bottom: 30px;
-}
 
+#vaccinatedCheck {
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
+}
 @media all and (max-width: 540px) {
-  .logo {
-    margin-right: auto;
-    margin-left: auto;
-    width: 60px;
-    height: 55px;
-  }
   .modal-content {
-    margin-top: 10px;
-    width: 95%;
-    height: auto;
+    width: 98%;
     font-size: medium;
+  }
+  .container {
+    display: block;
+  }
+  .vaccine-logo,
+  .social-logo {
+    margin-left: 0px;
   }
 }

@@ -162,7 +162,9 @@ function addMarker(long, lat, country, code) {
   if (!(lat > 90 || lat < -90 || isNaN(long) || isNaN(lat))) {
     const el = document.createElement("div");
     el.className = "marker mapboxgl-marker mapboxgl-marker-anchor-center";
-    const flagUrl = `https://www.countryflags.io/${code}/shiny/64.png`;
+    code = code.toLowerCase();
+    const flagUrl = `https://www.worldatlas.com/r/w425/img/flag/${code}-flag.jpg`;
+    //const flagUrl = `https://www.countryflags.io/${code}/shiny/64.png`;
     el.style.backgroundImage = `url(${flagUrl})`;
     const marker = new mapboxgl.Marker(el).setLngLat([long, lat]).addTo(map);
     marker.getElement().addEventListener("click", () => {

@@ -1,6 +1,11 @@
 # Covid Resource Tracker
 Interactive map with personalized covid risk details for each country
 
+- Developed user friendly interactive map with country specific covid data, vaccination status and health guidelines.
+- Devised simple algorithm to calculate country specific covid risk using population density, active cases and vaccination status.
+
+
+
 This was part of the project submitted in NASA SpaceApps Hackathon.
 
 To get started, run via liveserver..

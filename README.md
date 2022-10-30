@@ -3,6 +3,8 @@ Interactive map with personalized covid risk details for each country
 
 - Developed user friendly interactive map with country specific covid data, vaccination status and health guidelines.
 - Devised simple algorithm to calculate country specific covid risk using population density, active cases and vaccination status.
+- Worked with various API systems like mapbox, covid data, country flags etc.
+
 
 
 

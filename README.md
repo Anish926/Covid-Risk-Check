@@ -1,4 +1,4 @@
-# Covid Resource Tracker
+# Covid Risk Tracker
 Interactive map with personalized covid risk details for each country
 
 - Developed user friendly interactive map with country specific covid data, vaccination status and health guidelines.
